@@ -1,0 +1,46 @@
+.about__main_info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.about__title {
+    font-size: 24px;
+    padding: 20px;
+    width: 600px;
+    margin: 30px;
+}
+
+.about__subtitle {
+    font-size: 20px;
+    padding: 20px;
+    margin: 30px;
+}
+
+.about__photo {
+    width: 25%;
+    border-radius: 40px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.highlight_text {
+    color: crimson;
+}
+
+.about__advantages {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    font-size: 28px;
+}
+
+.advantages__item {
+    border-radius: 40px;
+    padding: 25px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+}
+.advantages__highlight {
+    font-size: 100px;
+    color: crimson;
+}
