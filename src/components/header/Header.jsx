@@ -5,7 +5,7 @@ function Header() {
     console.log(styles);
     return (
         <div className={styles.header}>
-            <a className={styles.header__logo} href="#">
+            <a className={styles.header__logo} href="/">
                 <img src={logo} className={styles.logo} alt="logo" />
             </a>
             <nav className={styles.header__menu}>
