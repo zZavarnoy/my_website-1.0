@@ -1,0 +1,38 @@
+.services__title {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.item__icon {
+    font-size: 76px;
+    padding: 20px;
+    margin: 15px;
+    background-color: crimson;
+    color: rgb(248, 245, 238);
+    border-radius: 50%;
+}
+
+.title__items {
+    max-width: 400px;
+    font-size: 24px;
+}
+
+.services__price {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    font-size: 28px;
+}
+
+.price__item {
+    border-radius: 40px;
+    width: 400px;
+    padding: 25px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.price__highlight {
+    font-size: 60px;
+    color: crimson;
+}
