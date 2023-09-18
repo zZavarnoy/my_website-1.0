@@ -2,7 +2,6 @@ import styles from "./Header.module.css";
 import logo from "../../img/logo.png";
 
 function Header() {
-    console.log(styles);
     return (
         <div className={styles.header}>
             <a className={styles.header__logo} href="/">

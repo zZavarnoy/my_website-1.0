@@ -1,0 +1,11 @@
+.works {
+    margin-top: 50px;
+}
+.works__gallery {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+.img_width {
+    width: 1440px;
+}

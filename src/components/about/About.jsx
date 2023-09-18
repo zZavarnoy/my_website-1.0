@@ -10,20 +10,21 @@ function About() {
                     className={styles.about__photo}
                     alt="Michael Nepochatov"
                 />
-
-                <p className={styles.about__title}>
-                    Hello, I'm{" "}
-                    <span className={styles.highlight_text}>Michael</span>, a
-                    passionate front-end developer with a creative flair and a
-                    love for crafting engaging and user-friendly web
-                    experiences. With{" "}
-                    <span className={styles.highlight_text}>4</span> years of
-                    experience in the ever-evolving world of{" "}
-                    <span className={styles.highlight_text}>
-                        web development
-                    </span>
-                    , I have honed my skills in turning design concepts into
-                    seamless, responsive, and visually stunning websites.
+                <div>
+                    <p className={styles.about__title}>
+                        Hello, I'm{" "}
+                        <span className={styles.highlight_text}>Michael</span>,
+                        a passionate front-end developer with a creative flair
+                        and a love for crafting engaging and user-friendly web
+                        experiences. With{" "}
+                        <span className={styles.highlight_text}>4</span> years
+                        of experience in the ever-evolving world of{" "}
+                        <span className={styles.highlight_text}>
+                            web development
+                        </span>
+                        , I have honed my skills in turning design concepts into
+                        seamless, responsive, and visually stunning websites.
+                    </p>
                     <p className={styles.about__subtitle}>
                         My toolkit includes proficiency in{" "}
                         <span className={styles.highlight_text}>HTML</span>,{" "}
@@ -41,7 +42,7 @@ function About() {
                         exceptional but also functions flawlessly across various
                         devices and browsers.
                     </p>
-                </p>
+                </div>
             </div>
 
             <div className={styles.about__advantages}>
