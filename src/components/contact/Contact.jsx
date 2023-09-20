@@ -15,7 +15,7 @@ function Contact() {
     }
 
     return (
-        <div className={styles.contact}>
+        <div className={styles.contact} id="contacts">
             <h1>Contact With Me</h1>
             <form onSubmit={handleFormSubmit} className={styles.contact__form}>
                 <div className={styles.form__block}>

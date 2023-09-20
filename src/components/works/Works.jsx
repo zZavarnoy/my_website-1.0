@@ -35,7 +35,7 @@ const images = [
 
 function Works() {
     return (
-        <div className={styles.works}>
+        <div className={styles.works} id="works">
             <h1>Here is my works</h1>
             <div className={styles.works__gallery}>
                 <ImageGallery

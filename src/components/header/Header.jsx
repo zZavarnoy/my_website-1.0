@@ -1,11 +1,33 @@
+import { useEffect, useState } from "react";
 import styles from "./Header.module.css";
-import logo from "../../img/logo.png";
 
 function Header() {
+    const [headerStyle, setHeaderStyle] = useState(false);
+
+    const toggleHeaderStyle = () => {
+        const scrolled = window.scrollY;
+        if (scrolled > 300) {
+            setHeaderStyle(true);
+        } else {
+            setHeaderStyle(false);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", toggleHeaderStyle);
+    }, []);
+
     return (
         <div className={styles.header}>
-            <a className={styles.header__logo} href="/">
-                <img src={logo} className={styles.logo} alt="logo" />
+            <a
+                className={
+                    headerStyle
+                        ? styles.header__logo_small
+                        : styles.header__logo
+                }
+                href="/"
+            >
+                Nepochatov [dev]
             </a>
             <nav className={styles.header__menu}>
                 <a className={styles.menu__item} href="#about">
