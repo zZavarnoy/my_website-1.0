@@ -2,22 +2,7 @@
     text-align: center;
 }
 
-.up_button {
-    position: fixed;
-    right: 50px;
-    bottom: 50px;
-    font-size: 24px;
-    padding: 10px;
-    line-height: 16px;
-    color: crimson;
-    background-color: rgb(248, 245, 238);
-    border-radius: 5px;
-    border: 0;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
-    transition: box-shadow 0.5s;
-}
-
-.up_button:hover {
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.7);
-    cursor: pointer;
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
 }

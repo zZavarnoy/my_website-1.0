@@ -1,7 +1,4 @@
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     width: 100%;
     background: linear-gradient(
         90deg,
@@ -12,6 +9,14 @@
     position: fixed;
     top: 0;
     z-index: 5;
+}
+
+.hearer__container {
+    max-width: 1600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
 }
 
 .header__logo {

@@ -10,42 +10,19 @@ function Services() {
             <div className={styles.services__title}>
                 <div className={styles.title__items}>
                     <AiOutlineTeam className={styles.item__icon} />
-                    <p>
-                        Experienced Team: Our seasoned front-end developers
-                        bring years of experience and expertise to the table.
-                        They stay updated with the latest industry trends,
-                        ensuring your website remains at the forefront of
-                        technology.
-                    </p>
+                    <p>Experienced Team</p>
                 </div>
                 <div className={styles.title__items}>
                     <TbHandFinger className={styles.item__icon} />
-                    <p>
-                        Responsive Design: We specialize in crafting responsive
-                        web designs that adapt seamlessly to various devices and
-                        screen sizes. Your website will look and perform
-                        flawlessly on desktops, tablets, and smartphones.
-                    </p>
+                    <p>Responsive Design</p>
                 </div>
                 <div className={styles.title__items}>
                     <AiOutlineUser className={styles.item__icon} />
-                    <p>
-                        User-Centric Approach: User experience is at the heart
-                        of our development process. We design interfaces that
-                        are intuitive, engaging, and tailored to your target
-                        audience, resulting in higher user satisfaction and
-                        conversion rates.
-                    </p>
+                    <p>User-Centric Approach</p>
                 </div>
                 <div className={styles.title__items}>
                     <MdSpeed className={styles.item__icon} />
-                    <p>
-                        User-Centric Approach: User experience is at the heart
-                        of our development process. We design interfaces that
-                        are intuitive, engaging, and tailored to your target
-                        audience, resulting in higher user satisfaction and
-                        conversion rates.
-                    </p>
+                    <p>User-Centric Approach</p>
                 </div>
             </div>
             <div className={styles.services__price}>

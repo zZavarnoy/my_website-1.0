@@ -7,5 +7,9 @@
     margin: 50px 0;
 }
 .img_width {
-    width: 1440px;
+    min-width: 1440px;
+}
+
+polyline {
+    color: #333333;
 }

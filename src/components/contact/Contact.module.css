@@ -66,3 +66,19 @@ textarea.form__input:focus {
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+    .contact__form {
+        width: 450px;
+        margin: 50px 0 0 0;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .contact__form {
+        width: 350px;
+        margin: 50px 0 0 0;
+        padding: 15px;
+    }
+}

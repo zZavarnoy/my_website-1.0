@@ -4,11 +4,24 @@ import styles from "./Contact.module.css";
 function Contact() {
     const [data, setData] = useState({ email: "", text: "" });
 
-    function handleFormSubmit(event) {
+    // function handleFormSubmit(event) {
+    //     event.preventDefault();
+    //     alert(JSON.stringify(data));
+    //     setData({ email: "", text: "" });
+    // }
+
+    const handleFormSubmit = async (event) => {
         event.preventDefault();
-        alert(JSON.stringify(data));
+        await fetch("m380680908367@gmail.com", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        });
+
         setData({ email: "", text: "" });
-    }
+    };
 
     function handleInputChange(event, name) {
         setData({ ...data, [name]: event.target.value });
