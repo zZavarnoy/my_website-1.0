@@ -11,7 +11,7 @@
     z-index: 5;
 }
 
-.hearer__container {
+.header__container {
     max-width: 1600px;
     display: flex;
     align-items: center;
@@ -47,16 +47,6 @@
     text-decoration: none;
 }
 
-/* .logo {
-    width: 180px;
-    height: 80px;
-    background-color: rgb(248, 245, 238);
-    padding: 10px;
-    border-radius: 40px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
-    transition: box-shadow 0.5s;
-} */
-
 .menu__item {
     font-size: 24px;
     padding: 10px 25px;
@@ -72,4 +62,99 @@
 .menu__item:hover,
 .header__logo:hover {
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.7);
+}
+
+.menu__btn {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    display: none;
+    border-radius: 5px;
+}
+.menu__btn span {
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff9f9;
+    transition: all 0.5s;
+}
+.menu__btn span:nth-of-type(2) {
+    top: calc(50% - 5px);
+}
+.menu__btn span:nth-of-type(3) {
+    top: calc(50% + 5px);
+}
+
+.menu__btn_active {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    display: none;
+    border-radius: 5px;
+}
+
+.menu__btn_active span {
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff9f9;
+    transition: all 0.5s;
+}
+
+.menu__btn_active span:nth-of-type(1) {
+    display: none;
+}
+
+.menu__btn_active span:nth-of-type(2) {
+    transform: rotate(45deg);
+    left: 20%; /* Расположение левого бара */
+}
+
+.menu__btn_active span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    left: 20%; /* Расположение левого бара */
+}
+
+@media screen and (max-width: 1024px) {
+    .header__menu {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 30px 0;
+        padding-top: 80px;
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    .menu__btn {
+        display: flex;
+        margin: 0 20px;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .menu__btn_active {
+        display: flex;
+        margin: 0 20px;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .menu__item {
+        margin: 15px;
+    }
 }

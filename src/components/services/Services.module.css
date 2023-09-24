@@ -1,6 +1,11 @@
+.services {
+    width: 100%;
+}
+
 .services__title {
     margin-top: 50px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
 }
@@ -15,13 +20,13 @@
 }
 
 .title__items {
-    width: 250px;
+    width: 20%;
     font-size: 24px;
 }
 
 .services__price {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 50px;
     font-size: 28px;
 }
@@ -29,13 +34,12 @@
 .price__item {
     border-radius: 40px;
     padding: 25px;
-    width: 400px;
-    margin: 0 20px;
+    width: 25%;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
 }
 
 .price__highlight {
-    font-size: 60px;
+    font-size: 45px;
     color: crimson;
 }
 
@@ -47,10 +51,12 @@
     .services__price {
         flex-wrap: wrap;
         justify-content: center;
+        justify-content: space-around;
     }
 
     .price__item {
-        margin-top: 50px;
+        width: 40%;
+        margin-top: 20px;
     }
 
     .item__icon {
@@ -64,6 +70,22 @@
 
 @media screen and (max-width: 768px) {
     .title__items {
+        width: 40%;
         margin-top: 25px;
+    }
+
+    .price__item {
+        width: 60%;
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .title__items {
+        width: 90%;
+    }
+
+    .price__item {
+        width: 80%;
     }
 }

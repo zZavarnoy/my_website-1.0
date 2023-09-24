@@ -10,8 +10,8 @@ function About() {
                     className={styles.about__photo}
                     alt="Michael Nepochatov"
                 />
-                <div>
-                    <p className={styles.about__title}>
+                <div className={styles.about__title}>
+                    <p className={styles.about__primary_title}>
                         Hello, I'm{" "}
                         <span className={styles.highlight_text}>Michael</span>,
                         a passionate front-end developer with a creative flair
