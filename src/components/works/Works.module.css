@@ -1,15 +1,11 @@
 .works {
     margin-top: 50px;
 }
-.works__gallery {
-    display: flex;
-    justify-content: center;
-    margin: 50px 0;
-}
-.img_width {
-    min-width: 1440px;
+
+.works__swiper {
+    margin-top: 50px;
 }
 
-polyline {
-    color: #333333;
+.works__img {
+    max-width: 100%;
 }

@@ -6,3 +6,10 @@
     max-width: 1600px;
     margin: 0 auto;
 }
+
+.container_dark {
+    max-width: 1600px;
+    margin: 0 auto;
+    background-color: #1b1f23;
+    color: rgba(255, 255, 255, 0.8);
+}

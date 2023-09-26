@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./Contact.module.css";
 
-function Contact() {
+function Contact({ theme }) {
     const [data, setData] = useState({ email: "", text: "" });
 
     // function handleFormSubmit(event) {
@@ -40,7 +40,11 @@ function Contact() {
                             onChange={(event) =>
                                 handleInputChange(event, "email")
                             }
-                            className={styles.form__input}
+                            className={
+                                theme
+                                    ? styles.form__input_dark
+                                    : styles.form__input
+                            }
                         />
                     </label>
                 </div>
@@ -53,7 +57,11 @@ function Contact() {
                             onChange={(event) =>
                                 handleInputChange(event, "text")
                             }
-                            className={styles.form__input}
+                            className={
+                                theme
+                                    ? styles.form__input_dark
+                                    : styles.form__input
+                            }
                         ></textarea>
                     </label>
                 </div>

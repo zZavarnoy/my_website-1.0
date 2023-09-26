@@ -4,7 +4,7 @@ import { TbHandFinger } from "react-icons/tb";
 import { AiOutlineUser } from "react-icons/ai";
 import { MdSpeed } from "react-icons/md";
 
-function Services() {
+function Services({ theme }) {
     return (
         <div className={styles.services} id="services">
             <div className={styles.services__title}>
@@ -25,8 +25,13 @@ function Services() {
                     <p>User-Centric Approach</p>
                 </div>
             </div>
+
             <div className={styles.services__price}>
-                <div className={styles.price__item}>
+                <div
+                    className={
+                        theme ? styles.price__item_dark : styles.price__item
+                    }
+                >
                     <span className={styles.price__highlight}>
                         Сonsultation
                     </span>
@@ -36,14 +41,22 @@ function Services() {
                     </p>
                     <span className={styles.price__highlight}>Free</span>
                 </div>
-                <div className={styles.price__item}>
+                <div
+                    className={
+                        theme ? styles.price__item_dark : styles.price__item
+                    }
+                >
                     <span className={styles.price__highlight}>
                         Design Creation
                     </span>
                     <p>Сreating a unique design tailored to your preferences</p>
                     <span className={styles.price__highlight}>$100</span>
                 </div>
-                <div className={styles.price__item}>
+                <div
+                    className={
+                        theme ? styles.price__item_dark : styles.price__item
+                    }
+                >
                     <span className={styles.price__highlight}>
                         Website Сreation
                     </span>

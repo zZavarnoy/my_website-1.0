@@ -38,6 +38,14 @@
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
 }
 
+.price__item_dark {
+    border-radius: 40px;
+    padding: 25px;
+    width: 25%;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+    background-color: #38434f;
+}
+
 .price__highlight {
     font-size: 45px;
     color: crimson;
@@ -55,6 +63,11 @@
     }
 
     .price__item {
+        width: 40%;
+        margin-top: 20px;
+    }
+
+    .price__item_dark {
         width: 40%;
         margin-top: 20px;
     }
@@ -78,6 +91,11 @@
         width: 60%;
         margin-top: 50px;
     }
+
+    .price__item_dark {
+        width: 60%;
+        margin-top: 50px;
+    }
 }
 
 @media screen and (max-width: 425px) {
@@ -87,5 +105,13 @@
 
     .price__item {
         width: 80%;
+    }
+
+    .price__item_dark {
+        width: 80%;
+    }
+
+    .price__highlight {
+        font-size: 42px;
     }
 }

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./Header.module.css";
 import { useMediaQuery } from "react-responsive";
 
-function Header() {
+function Header(props) {
     const [headerStyle, setHeaderStyle] = useState(false);
     const [isActive, setIsActive] = useState(false);
 
@@ -40,6 +40,7 @@ function Header() {
                 </a>
                 {isDesctop ? (
                     <nav className={styles.header__menu}>
+                        {props.children}
                         <a className={styles.menu__item} href="#about">
                             About
                         </a>
@@ -56,6 +57,7 @@ function Header() {
                 ) : (
                     isActive && (
                         <nav className={styles.header__menu}>
+                            {props.children}
                             <a className={styles.menu__item} href="#about">
                                 About
                             </a>

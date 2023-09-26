@@ -125,6 +125,12 @@
     left: 20%; /* Расположение левого бара */
 }
 
+@media screen and (max-width: 1110px) {
+    .menu__item {
+        margin: 0 5px;
+    }
+}
+
 @media screen and (max-width: 1024px) {
     .header__menu {
         height: 100%;

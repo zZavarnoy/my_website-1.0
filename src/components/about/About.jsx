@@ -1,15 +1,17 @@
 import styles from "./About.module.css";
 import my_photo from "../../img/my_photo.jpg";
 
-function About() {
+function About({ theme }) {
     return (
         <div className={styles.about} id="about">
             <div className={styles.about__main_info}>
-                <img
-                    src={my_photo}
-                    className={styles.about__photo}
-                    alt="Michael Nepochatov"
-                />
+                <div className={styles.about__img_box}>
+                    <img
+                        src={my_photo}
+                        className={styles.about__photo}
+                        alt="Michael Nepochatov"
+                    />
+                </div>
                 <div className={styles.about__title}>
                     <p className={styles.about__primary_title}>
                         Hello, I'm{" "}
@@ -46,17 +48,35 @@ function About() {
             </div>
 
             <div className={styles.about__advantages}>
-                <div className={styles.advantages__item}>
+                <div
+                    className={
+                        theme
+                            ? styles.advantages__item_dark
+                            : styles.advantages__item
+                    }
+                >
                     <span className={styles.advantages__highlight}>4+</span>
                     <br />
                     years of web development
                 </div>
-                <div className={styles.advantages__item}>
+                <div
+                    className={
+                        theme
+                            ? styles.advantages__item_dark
+                            : styles.advantages__item
+                    }
+                >
                     <span className={styles.advantages__highlight}>30+</span>
                     <br />
                     satisfied customers from all over the world
                 </div>
-                <div className={styles.advantages__item}>
+                <div
+                    className={
+                        theme
+                            ? styles.advantages__item_dark
+                            : styles.advantages__item
+                    }
+                >
                     <span className={styles.advantages__highlight}>50+</span>
                     <br />
                     unique designs and projects
