@@ -13,8 +13,11 @@ import { LuMoon } from "react-icons/lu";
 import { useState } from "react";
 
 function App() {
-    const [darkMode, setDarkMode] = useState(false);
-    const [isChecked, setIsChecked] = useState(false);
+    const stor = JSON.parse(localStorage.getItem("dark"));
+
+    const [darkMode, setDarkMode] = useState(!!stor);
+
+    localStorage.setItem("dark", JSON.stringify(darkMode));
 
     return (
         <div className="App">
@@ -26,12 +29,11 @@ function App() {
                             className="switch"
                             onChange={() => {
                                 setDarkMode((dark) => !dark);
-                                setIsChecked((check) => !check);
                             }}
                         >
                             <input
                                 type="checkbox"
-                                defaultChecked={isChecked}
+                                defaultChecked={darkMode}
                             ></input>
                             <span className="slider round"></span>
                         </label>

@@ -1,10 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
-import work1 from "../../img/work1.png";
-import work2 from "../../img/work2.png";
-import work3 from "../../img/work3.png";
-import work4 from "../../img/work4.png";
+import work1 from "../../img/work1.webp";
+import work2 from "../../img/work2.webp";
+import work3 from "../../img/work3.webp";
+import work4 from "../../img/work4.webp";
 
 import "swiper/css";
 import "swiper/css/navigation";

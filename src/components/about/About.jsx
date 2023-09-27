@@ -1,5 +1,5 @@
 import styles from "./About.module.css";
-import my_photo from "../../img/my_photo.jpg";
+import my_photo from "../../img/my_photo.webp";
 
 function About({ theme }) {
     return (
