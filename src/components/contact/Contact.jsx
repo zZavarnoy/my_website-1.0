@@ -2,25 +2,35 @@ import { useState } from "react";
 import styles from "./Contact.module.css";
 
 function Contact({ theme }) {
-    const [data, setData] = useState({ email: "", text: "" });
+    const [data, setData] = useState({
+        email: "",
+        service: "consultation",
+        text: "",
+    });
+    const [showValid, setShowValid] = useState(false);
 
-    // function handleFormSubmit(event) {
-    //     event.preventDefault();
-    //     alert(JSON.stringify(data));
-    //     setData({ email: "", text: "" });
-    // }
+    const validEmail = /^[A-Za-z0-9._]+@[a-z0-9]+(\.[a-z.]+)+$/;
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
-        await fetch("https://jsonplaceholder.typicode.com/posts", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(data),
-        });
+        if (validEmail.test(data.email)) {
+            await fetch("https://jsonplaceholder.typicode.com/posts", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            });
 
-        setData({ email: "", text: "" });
+            setData({ email: "", service: "consultation", text: "" });
+            setShowValid(false);
+
+            alert(
+                "The message has been sent, please wait for a response via email or other social network."
+            );
+        } else {
+            alert("The form has been filled out incorrectly");
+        }
     };
 
     function handleInputChange(event, name) {
@@ -33,21 +43,63 @@ function Contact({ theme }) {
             <form onSubmit={handleFormSubmit} className={styles.contact__form}>
                 <div className={styles.form__block}>
                     <label>
-                        E-mail:
+                        Your E-mail:
                         <input
-                            type="text"
+                            type="email"
                             value={data.email}
+                            required
                             onChange={(event) =>
                                 handleInputChange(event, "email")
                             }
+                            placeholder="example12@mail.com"
                             className={
                                 theme
                                     ? styles.form__input_dark
                                     : styles.form__input
                             }
+                            onFocus={() => setShowValid(true)}
                         />
                     </label>
+                    {showValid ? (
+                        validEmail.test(data.email) ? (
+                            <div className={styles.form__block_valid}>
+                                Valid E-mail
+                            </div>
+                        ) : (
+                            <div className={styles.form__block_invalid}>
+                                Invalid E-mail
+                            </div>
+                        )
+                    ) : (
+                        ""
+                    )}
                 </div>
+
+                <div className={styles.form__block}>
+                    <label>
+                        Сhoose the type of work:
+                        <select
+                            name="cars"
+                            className={
+                                theme
+                                    ? styles.form__input_dark
+                                    : styles.form__input
+                            }
+                            onChange={(event) =>
+                                handleInputChange(event, "service")
+                            }
+                        >
+                            <option value="consultation">Сonsultation</option>
+                            <option value="design_creation">
+                                Design Creation
+                            </option>
+                            <option value="website_creation">
+                                Website Сreation
+                            </option>
+                        </select>
+                    </label>
+                </div>
+
                 <div className={styles.form__block}>
                     <label>
                         Your Message:
@@ -57,6 +109,7 @@ function Contact({ theme }) {
                             onChange={(event) =>
                                 handleInputChange(event, "text")
                             }
+                            placeholder="Here you can write your wishes and/or leave contacts on your social networks."
                             className={
                                 theme
                                     ? styles.form__input_dark

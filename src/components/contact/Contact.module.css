@@ -12,6 +12,16 @@
     margin: 20px 0;
 }
 
+.form__block_valid {
+    font-size: 14px;
+    color: green;
+}
+
+.form__block_invalid {
+    font-size: 14px;
+    color: red;
+}
+
 .contact__form {
     width: 50%;
     text-align: left;
@@ -52,6 +62,10 @@
 }
 
 input.form__input {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+select.form__input {
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 }
 
