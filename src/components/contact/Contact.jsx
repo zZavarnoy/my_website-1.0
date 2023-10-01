@@ -1,7 +1,12 @@
 import { useState } from "react";
 import styles from "./Contact.module.css";
 
-function Contact({ theme }) {
+function Contact({
+    theme,
+    successFormOnSubmit,
+    invalidFormOnSubmit,
+    failFormSubmit,
+}) {
     const [data, setData] = useState({
         email: "",
         service: "consultation",
@@ -14,22 +19,52 @@ function Contact({ theme }) {
     const handleFormSubmit = async (event) => {
         event.preventDefault();
         if (validEmail.test(data.email)) {
-            await fetch("https://jsonplaceholder.typicode.com/posts", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(data),
-            });
+            try {
+                // const response = await fetch(
+                //     "https://jsonplaceholder.typicode.com/posts",
+                //     {
+                //         method: "POST",
+                //         headers: {
+                //             "Content-Type": "application/json",
+                //         },
+                //         body: JSON.stringify(data),
+                //     }
+                // );
+                // console.log(response);
 
-            setData({ email: "", service: "consultation", text: "" });
-            setShowValid(false);
+                // response.ok
+                //     ? (() => {
+                //           setData({
+                //               email: "",
+                //               service: "consultation",
+                //               text: "",
+                //           });
+                //           setShowValid(false);
+                //           successFormOnSubmit();
+                //       })()
+                //     : failFormSubmit();
 
-            alert(
-                "The message has been sent, please wait for a response via email or other social network."
-            );
+                await fetch("https://jsonplaceholder.typicode.com/posts", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(data),
+                });
+
+                setData({
+                    email: "",
+                    service: "consultation",
+                    text: "",
+                });
+                setShowValid(false);
+                successFormOnSubmit();
+            } catch (error) {
+                failFormSubmit();
+                console.log(error);
+            }
         } else {
-            alert("The form has been filled out incorrectly");
+            invalidFormOnSubmit();
         }
     };
 
